@@ -4,9 +4,6 @@
 - Performed waveform validation across several rising-edge test vectors, verifying output propagation through delay cycles under realistic clock inputs.
 - Integrated serial input/output via shift-register emulation to simulate test/debug mode, ensuring design testability and waveform reproducibility.
 
-## Technologies & Skills Used
-ASIC design, Cadence Virtuoso, waveform validation, digital logic, clock timing, testbench emulation, hardware engineering
-
 ## Setup Instructions
 1. Open in Virtuoso or compatible simulation software
 2. Load the layout and testbench
