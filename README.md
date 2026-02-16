@@ -1,7 +1,4 @@
-# ASIC Hardware Design – 4x4 Array Multiplier
-
-## Overview
-Designed a 4x4-bit multiplier in Virtuoso using custom layout and logic gates, implementing industry-standard full-adder arrays with bit-sliced logic.
+# CMOS-VLSI Design - 4x4 Bit-Sliced Array Multiplier
 
 ## Features
 - Performed waveform validation across several rising-edge test vectors, verifying output propagation through delay cycles under realistic clock inputs.
@@ -15,8 +12,6 @@ ASIC design, Cadence Virtuoso, waveform validation, digital logic, clock timing,
 2. Load the layout and testbench
 3. Simulate and observe waveform output
 
-
-
 ## Full Adder Reference (Standard FA Layout View)
 ![Full Adder Reference](https://github.com/user-attachments/assets/54c2e8d4-6c03-45fa-9ef6-a7209aa6d3b6)
 
@@ -25,8 +20,6 @@ ASIC design, Cadence Virtuoso, waveform validation, digital logic, clock timing,
 
 ## Final Layout
 ![Final Product](https://github.com/user-attachments/assets/5bb6e557-4cbb-482e-b366-54a7577058ed)
-
-
 
 ### Test Vector Results for 4x4 Bit Multiplier (Normal Mode | TEST = Low)
 
