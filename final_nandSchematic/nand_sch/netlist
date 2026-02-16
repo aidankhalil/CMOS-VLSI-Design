@@ -1,0 +1,39 @@
+// Generated for: spectre
+// Generated on: Nov  7 10:40:23 2024
+// Design library name: cmosvlsi
+// Design cell name: nand_sch
+// Design view name: schematic
+simulator lang=spectre
+global 0
+include "$C5_PDK_PATH/models/spectre/amis500cxakxx/bip.scs" section=typ
+include "$C5_PDK_PATH/models/spectre/amis500cxakxx/cap.scs" section=typ
+include "$C5_PDK_PATH/models/spectre/amis500cxakxx/dio.scs" section=typ
+include "$C5_PDK_PATH/models/spectre/amis500cxakxx/mos.scs" section=typ
+include "$C5_PDK_PATH/models/spectre/amis500cxakxx/res.scs" section=typ
+include "$CDS_WORKAREA/userSetup_$USER/c5/device_models.scs" section=Default
+include "$CDS_WORKAREA/userSetup_$USER/c5/custom_model_libraries.spectre"
+
+// Library name: cmosvlsi
+// Cell name: nand_sch
+// View name: schematic
+M2 (Vout Vb net23 ground) enm w=5.0 l=0.6 m=(1)*(1) mult=(1)*(1) region=1 \
+        matchingLevel="LOW"
+M3 (net23 Va ground ground) enm w=5.0 l=0.6 m=(1)*(1) mult=(1)*(1) \
+        region=1 matchingLevel="LOW"
+M1 (Vout ground vdd vdd) epm w=5.0 l=0.6 m=(1)*(1) mult=(1)*(1) region=1 \
+        matchingLevel="LOW"
+include "./_graphical_stimuli.scs"
+simulatorOptions options reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=27 \
+    tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 \
+    digits=5 cols=80 pivrel=1e-3 sensfile="../psf/sens.output" \
+    checklimitdest=psf 
+tran tran stop=100n errpreset=moderate write="spectre.ic" \
+    writefinal="spectre.fc" annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+saveOptions options save=allpub
